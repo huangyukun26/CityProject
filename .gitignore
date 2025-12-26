@@ -1,0 +1,5 @@
+node_modules
+vite.config.ts.timestamp-*
+dist
+coverage
+playwright-report
