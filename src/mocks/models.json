@@ -1,0 +1,20 @@
+[
+  {
+    "id": "mae-01",
+    "name": "MAE-Veg",
+    "version": "v1.2.0",
+    "releasedAt": "2024-05-15",
+    "metrics": { "mae": 0.08, "psnr": 28.4 },
+    "description": "适用于城市绿地重建的基础版本。",
+    "diff": ["增加遮挡修复模块", "优化输入归一化"]
+  },
+  {
+    "id": "mae-02",
+    "name": "MAE-Veg",
+    "version": "v1.3.0",
+    "releasedAt": "2024-08-20",
+    "metrics": { "mae": 0.06, "psnr": 30.1 },
+    "description": "提升纹理还原效果，支持批量推理。",
+    "diff": ["新增批量推理", "改进噪声抑制"]
+  }
+]

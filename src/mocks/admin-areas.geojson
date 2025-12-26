@@ -1,0 +1,53 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "中心城区" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [116.35, 39.95],
+            [116.45, 39.95],
+            [116.45, 39.90],
+            [116.35, 39.90],
+            [116.35, 39.95]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "西郊新区" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [116.25, 39.95],
+            [116.35, 39.95],
+            [116.35, 39.90],
+            [116.25, 39.90],
+            [116.25, 39.95]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "南部园区" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [116.30, 39.90],
+            [116.45, 39.90],
+            [116.45, 39.85],
+            [116.30, 39.85],
+            [116.30, 39.90]
+          ]
+        ]
+      }
+    }
+  ]
+}
