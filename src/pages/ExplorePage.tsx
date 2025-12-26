@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import vegetationTypes from "../mocks/vegetation-types.json";
-import adminAreas from "../mocks/admin-areas.geojson";
+import adminAreasRaw from "../mocks/admin-areas.geojson?raw";
 
 const ExplorePage: React.FC = () => {
   const [map, setMap] = useState<L.Map | null>(null);
@@ -19,6 +19,7 @@ const ExplorePage: React.FC = () => {
       attribution: "&copy; OpenStreetMap"
     }).addTo(mapInstance);
 
+    const adminAreas = JSON.parse(adminAreasRaw) as any;
     const areasLayer = L.geoJSON(adminAreas as any, {
       style: { color: "#1d9b7f", weight: 2, fillOpacity: 0.1 },
       onEachFeature: (feature, layer) => {

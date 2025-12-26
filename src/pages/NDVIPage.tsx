@@ -4,7 +4,7 @@ import { computeNDVIForImage, computeNDVIFromCSV } from "../utils/ndvi";
 import { parseCSV } from "../utils/csv";
 import { NDVIResult } from "../types";
 import Chart from "../components/Chart";
-import adminAreas from "../mocks/admin-areas.geojson";
+import adminAreasRaw from "../mocks/admin-areas.geojson?raw";
 
 const renderNDVIToCanvas = (grid: number[][]) => {
   const canvas = document.createElement("canvas");
@@ -62,7 +62,8 @@ const NDVIPage: React.FC = () => {
     }
     setResult(output);
     setImageUrl(renderNDVIToCanvas(output.grid));
-    const adminRanking = (adminAreas as any).features.map((feature: any) => ({
+    const adminAreas = JSON.parse(adminAreasRaw) as any;
+    const adminRanking = adminAreas.features.map((feature: any) => ({
       name: feature.properties.name,
       value: Number((Math.random() * 0.6 + 0.2).toFixed(2))
     }));
